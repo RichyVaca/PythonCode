@@ -33,6 +33,7 @@ def main():
 
     #hacemos un ciclo para dibujar y esperar eventos
     win.mainloop()
+    
 
 #Para funcion main
 if __name__ == "__main__":
