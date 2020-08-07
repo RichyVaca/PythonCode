@@ -1,28 +1,31 @@
 """
-Nombre: Punto.py
-Objtivo: Herencia
-autor: Ricardo Hiram Morales Vaca
-Fecha: 30 de julio de 2020
+Nombre: Circunferencia
+Objetivo: Permite calcular el area de una circunferencia
+Autor: Ricardo Hiram Morales Vaca
+Fecha: 28 de julio de 2020
 """
+
+#importamos libreria math
 import math
-from Punto import Punto
 
-class Circunferencia(Punto):
-    #Constructor
-    def __init__ (self,valorX, valorY, vradio):
-        Punto.__init__(self, valorX, valorY)
-        #Atributo de la circunferencia
-        self.radio = vradio
-    
-    def getRadio(self):
-        return radio
-    
-    def setRadio(self, vradio):
-        self.radio = vRadio
+#---------------------------
+#funcion para calcular area
+#---------------------------
 
-    def getArea(self):
-        return math.pi*math.pow(self.radio, 2)
+def calcularArea(valorRadio):
+	return math.pi*math.pow(valorRadio, 2)
 
-    def toString(self):
-        return Punto.toString(self)+" y el valor del radio es: "+str(self.radio)+" y el área es: "+ str(self.getArea())
 
+
+#Modulo principal
+def main():
+	ciclo = 'S'
+	while (ciclo == 's' or ciclo == 'S'):
+		print("--- Programa para caluclar area de circunferencia ---")
+		vradio = int(input("Introduce valor del radio"))
+		print("El area de la circunferencia  con radio igual a: {}, es: {}".format(vradio, calcularArea(vradio)))
+		ciclo = input("otro calculo (s/n)?")
+	else:
+		print("fin del programa")
+if __name__ == "__main__":
+	main()
